@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dce8ff 0%, #ede8ff 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow:
+    0 4px 6px rgba(99, 102, 241, 0.06),
+    0 12px 40px rgba(99, 102, 241, 0.13);
+  padding: 28px;
+  width: 360px;
+}
+
+/* ── Header ── */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
+}
+
+.card-month {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6366f1;
+  background: #eef0fe;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+/* ── Day-of-week labels ── */
+.day-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 4px;
+}
+
+.day-headers span {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #b0b7c3;
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+
+/* ── Day grid ── */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 2px;
+}
+
+.day {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Colored circle for today, drawn behind the number */
+.day.today {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.day.today::before {
+  content: '';
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: #6366f1;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+  z-index: 0;
+}
+
+.day.today span,
+.day {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: #f1f2f6;
+  margin: 22px 0;
+}
+
+/* ── Events ── */
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.event-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-indigo  { background: #6366f1; }
+.dot-purple  { background: #a855f7; }
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.event-time {
+  font-size: 12px;
+  color: #b0b7c3;
+}

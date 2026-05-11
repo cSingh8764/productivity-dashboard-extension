@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar Card</title>
+  <link rel="stylesheet" href="calendar-card.css" />
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Header -->
+    <div class="card-header">
+      <span class="card-title">Calendar</span>
+      <span class="card-month">May 2026</span>
+    </div>
+
+    <!-- Day-of-week labels -->
+    <div class="day-headers">
+      <span>Sun</span>
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+    </div>
+
+    <!-- Day grid — May 2026 starts on Friday (5 blank cells) -->
+    <div class="day-grid">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span class="day">1</span>
+      <span class="day">2</span>
+
+      <span class="day">3</span>
+      <span class="day">4</span>
+      <span class="day">5</span>
+      <span class="day">6</span>
+      <span class="day">7</span>
+      <span class="day">8</span>
+      <span class="day">9</span>
+
+      <span class="day">10</span>
+      <span class="day today">11</span>
+      <span class="day">12</span>
+      <span class="day">13</span>
+      <span class="day">14</span>
+      <span class="day">15</span>
+      <span class="day">16</span>
+
+      <span class="day">17</span>
+      <span class="day">18</span>
+      <span class="day">19</span>
+      <span class="day">20</span>
+      <span class="day">21</span>
+      <span class="day">22</span>
+      <span class="day">23</span>
+
+      <span class="day">24</span>
+      <span class="day">25</span>
+      <span class="day">26</span>
+      <span class="day">27</span>
+      <span class="day">28</span>
+      <span class="day">29</span>
+      <span class="day">30</span>
+
+      <span class="day">31</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Upcoming events -->
+    <div class="events">
+      <div class="event">
+        <span class="event-dot dot-indigo"></span>
+        <div class="event-info">
+          <span class="event-title">Design review</span>
+          <span class="event-time">Today · 2:00 PM</span>
+        </div>
+      </div>
+      <div class="event">
+        <span class="event-dot dot-purple"></span>
+        <div class="event-info">
+          <span class="event-title">Client call</span>
+          <span class="event-time">Wed, May 13 · 4:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
